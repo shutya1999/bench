@@ -2,155 +2,166 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>Bench</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <!--<link rel="stylesheet" href="css/bootstrap.css">-->
     <!--<link rel="stylesheet" href="css/bootstrap-grid.min.css">-->
+    <meta name="viewport" content="width=device-width">
 
 </head>
 <body>
 <header class="header">
-    <a href="index.html" class="logo"><img src="img/menu/logo.png" alt=""></a>
+    <div class="container">
+        <a href="index.html" class="logo"><img src="img/menu/logo.png" alt=""></a>
+        <nav class="nav">
+            <ul class="nav-menu">
+                <li class="nav-menu__item">
+                    <a href="index.html" class="nav-menu__link active">Головна</a>
+                </li>
+                <li class="nav-menu__item nav-menu__item--parent">
+                    <a href="#" class="nav-menu__link">Вироби</a>
+                    <ul class="nav-sub-menu">
+                        <li class="nav-sub-menu__item">
+                            <a href="bench.html" class="nav-sub-menu__link">Лавки</a>
+                        </li>
+                        <li class="nav-sub-menu__item">
+                            <a href="table.html" class="nav-sub-menu__link">Столи</a>
+                        </li>
+                        <li class="nav-sub-menu__item">
+                            <a href="swing.html" class="nav-sub-menu__link">Качелі</a>
+                        </li>
+                        <li class="nav-sub-menu__item">
+                            <a href="sets.html" class="nav-sub-menu__link">Комплекти</a>
+                        </li>
+                        <li class="nav-sub-menu__item">
+                            <a href="other.html" class="nav-sub-menu__link">Інше</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="about.html" class="nav-menu__link" style="white-space: nowrap">Про нас</a>
+                </li>
+                <li class="nav-menu__item">
+                    <a href="delivery.html" class="nav-menu__link">Доставка</a>
+                </li>
+            </ul>
 
-    <nav class="nav">
-        <ul class="nav-menu">
-            <li class="nav-menu__item">
-                <a href="index.html" class="nav-menu__link active">Головна</a>
-            </li>
-            <li class="nav-menu__item nav-menu__item--parent">
-                <a href="#" class="nav-menu__link">Вироби</a>
-                <ul class="nav-sub-menu">
-                    <li class="nav-sub-menu__item">
-                        <a href="bench.html" class="nav-sub-menu__link">Лавки</a>
-                    </li>
-                    <li class="nav-sub-menu__item">
-                        <a href="table.html" class="nav-sub-menu__link">Столи</a>
-                    </li>
-                    <li class="nav-sub-menu__item">
-                        <a href="swing.html" class="nav-sub-menu__link">Качелі</a>
-                    </li>
-                    <li class="nav-sub-menu__item">
-                        <a href="sets.html" class="nav-sub-menu__link">Комплекти</a>
-                    </li>
-                    <li class="nav-sub-menu__item">
-                        <a href="other.html" class="nav-sub-menu__link">Інше</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-menu__item">
-                <a href="about.html" class="nav-menu__link" style="white-space: nowrap">Про нас</a>
-            </li>
-            <li class="nav-menu__item">
-                <a href="delivery.html" class="nav-menu__link">Доставка</a>
-            </li>
-        </ul>
-        <div class="info">
-            <div class="kyivstar">
-                <img src="img/menu/kyivstar.png" alt="">
-                <p>(067)-440-57-22</p>
+            <div class="info">
+                <div class="kyivstar">
+                    <img src="img/menu/kyivstar.png" alt="">
+                    <p>(067)-440-57-22</p>
+                </div>
+                <div class="life">
+                    <img src="img/menu/lifecell.png" alt="">
+                    <p>(222)-233-23-32</p>
+                </div>
             </div>
-            <div class="life">
-                <img src="img/menu/lifecell.png" alt="">
-                <p>(222)-233-23-32</p>
+
+            <div class="login">
+                <a href="#">Вхід</a>
+                <a href="#"><img src="img/menu/user.png" alt=""></a>
             </div>
-        </div>
-
-        <div class="login">
-            <a href="#">Вхід</a>
-            <a href="#"><img src="img/menu/user.png" alt=""></a>
-        </div>
-
-    </nav>
+        </nav>
+    </div>
 
 </header>
 
 <main class="main">
     <div class="advantages">
-        <div class="slogan">
-            <h1>ВИГОТОВЛЕННЯ ДОМАШНЬОГО І САДОВОГО ІНВЕНТАРЮ З КОВАНИХ ЕЛЕМЕНТІВ ТА ДЕРЕВА</h1>
-            <ul class="check-ul">
-                <li class="check"><img src="img/main/check.png" alt="">
-                    <h1>Низькі ціни</h1></li>
-                <li class="check"><img src="img/main/check.png" alt="">
-                    <h1>Доставка по всій Україні</h1></li>
-                <li class="check"><img src="img/main/check.png" alt="">
-                    <h1>Більше п'яти років успішної роботи</h1></li>
-            </ul>
+        <div class="container">
+            <div class="slogan">
+                <h1>ВИГОТОВЛЕННЯ ДОМАШНЬОГО І САДОВОГО ІНВЕНТАРЮ З КОВАНИХ ЕЛЕМЕНТІВ ТА ДЕРЕВА</h1>
+                <ul class="check-ul">
+                    <li class="check"><img src="img/main/check.png" alt="">
+                        <h2>Низькі ціни</h2></li>
+                    <li class="check"><img src="img/main/check.png" alt="">
+                        <h2>Доставка по всій Україні</h2></li>
+                    <li class="check"><img src="img/main/check.png" alt="">
+                        <h2>Більше п'яти років успішної роботи</h2></li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <div class="main-goods">
         <h1>Основні товари</h1>
-        <div class="bench-table">
-            <div class="bench">
-                <h1><span>Лавки</span></h1>
-                <a href="bench.html"><img src="img/main/bench-main.png" alt=""></a>
+        <div class="container">
+            <div class="bench-table">
+                <div class="bench">
+                    <h1><span>Лавки</span></h1>
+                    <a href="bench.html"><img src="img/main/bench-main.png" alt=""></a>
+                </div>
+
+                <div class="table">
+                    <h1><span>Столи</span></h1>
+                    <a href="table.html"><img src="img/main/table-main.png" alt=""></a>
+                </div>
             </div>
 
-            <div class="table">
-                <h1><span>Столи</span></h1>
-                <a href="table.html"><img src="img/main/table-main.png" alt=""></a>
+            <div class="swing-other">
+                <div class="swing">
+                    <h1><span>Качелі</span></h1>
+                    <a href="swing.html"><img src="img/main/swing-main.png" alt=""></a>
+                </div>
+
+                <div class="other">
+                    <h1><span>Інше</span></h1>
+                    <a href="other.html"><img src="img/main/besedka-main.png" alt=""></a>
+                </div>
             </div>
         </div>
 
-        <div class="swing-other">
-            <div class="swing">
-                <h1><span>Качелі</span></h1>
-                <a href="swing.html"><img src="img/main/swing-main.png" alt=""></a>
-            </div>
-
-            <div class="other">
-                <h1><span>Інше</span></h1>
-                <a href="other.html"><img src="img/main/besedka-main.png" alt=""></a>
-            </div>
-        </div>
     </div>
 </main>
 
 <footer class="footer">
-    <div class="communication">
-        <div class="logo-footer">
-            <img src="img/footer/logo_white.png" alt="#">
-        </div>
-        <div class="contact">
-            <div class="telegram">
-                <img src="img/footer/telegram.png" alt="">
-                <p><a href="https://t.me/shutya99" target="_blank">@shutya99</a></p>
-            </div>
-            <div class="instagram">
-                <img src="img/footer/instagram.png" alt="">
-                <p><a href="https://www.instagram.com/ishytin_rm/" target="_blank">@ishytin_RM</a></p>
-            </div>
-            <div class="twitter">
-                <img src="img/footer/twitter.png" alt="">
-                <p><a href="https://twitter.com/ishutin69" target="_blank">@ishutin69</a></p>
-            </div>
-        </div>
-    </div>
-
     <div class="vertical-line"></div>
 
-    <div class="info">
-        <h1>Контактна інформація</h1>
-        <div class="kyivstar-footer">
-            <img src="img/footer/kyivstar-footer.png" alt="">
-            <p>(067)-440-57-21</p>
+    <div class="container">
+        <div class="communication">
+            <div class="logo-footer">
+                <img src="img/footer/logo_white.png" alt="#">
+            </div>
+            <div class="contact">
+                <div class="telegram">
+                    <img src="img/footer/telegram.png" alt="">
+                    <p><a href="https://t.me/shutya99" target="_blank">@shutya99</a></p>
+                </div>
+                <div class="instagram">
+                    <img src="img/footer/instagram.png" alt="">
+                    <p><a href="https://www.instagram.com/ishytin_rm/" target="_blank">@ishytin_RM</a></p>
+                </div>
+                <div class="twitter">
+                    <img src="img/footer/twitter.png" alt="">
+                    <p><a href="https://twitter.com/ishutin69" target="_blank">@ishutin69</a></p>
+                </div>
+            </div>
         </div>
-        <div class="lifecell-footer">
-            <img src="img/footer/lifecell-footer.png" alt="">
-            <p>(012)-345-67-89</p>
-        </div>
-        <div class="location-footer">
-            <img src="img/footer/location.png" alt="">
-            <p>м.Миронівка, Київська обл.</p>
-        </div>
-        <div class="email-footer">
-            <img src="img/footer/mail.png" alt="">
-            <p>romaishytin@gmail.com</p>
+
+
+        <div class="info-footer">
+            <h1>Контактна інформація</h1>
+            <div class="kyivstar-footer">
+                <img src="img/footer/kyivstar-footer.png" alt="">
+                <p>(067)-440-57-21</p>
+            </div>
+            <div class="lifecell-footer">
+                <img src="img/footer/lifecell-footer.png" alt="">
+                <p>(012)-345-67-89</p>
+            </div>
+            <div class="location-footer">
+                <img src="img/footer/location.png" alt="">
+                <p>м.Миронівка, Київська обл.</p>
+            </div>
+            <div class="email-footer">
+                <img src="img/footer/mail.png" alt="">
+                <p>romaishytin@gmail.com</p>
+            </div>
         </div>
     </div>
 </footer>
-
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="js/script.js"></script>
 </body>

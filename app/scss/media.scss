@@ -1,0 +1,189 @@
+@media (min-width: 1400px) {
+  .slogan{
+    margin: 0;
+  }
+  .bench-table{
+    margin: 0;
+  }
+  .swing-other{
+    margin: 0;
+  }
+  .communication{
+    margin: 20px 0;
+  }
+  .info{
+    margin: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .slogan {
+    h1, h2{
+      font-size: 50px;
+    }
+    //h2{
+    //  font-size: 50px;
+    //
+    //}
+  }
+  .check{
+    img{
+      width: 40px;
+    }
+    h1{
+      font-size: 40px;
+    }
+  }
+  .main-goods {
+    h1{
+      font-size: 40px;
+    }
+  }
+  .bench, .table, .swing, .other{
+    h1{
+      font-size: 30px;
+      top: 30px;
+    }
+  }
+  .contact{
+    p a{
+      font-size: 15px;
+    }
+    img{
+      height: 20px;
+    }
+  }
+  .info-footer {
+    h1{
+      font-size: 30px;
+    }
+    img{
+      height: 20px;
+    }
+    p{
+      font-size: 15px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .container{
+    padding: 0 20px;
+  }
+  .nav-menu{
+    display: none;
+  }
+  .slogan{
+    h1,h2 {
+      font-size: 40px;
+    }
+  }
+  .logo{
+    margin: 10px 0 ;
+  }
+  .nav{
+    margin: 10px 0;
+  }
+  .bench-table{
+    flex-direction: column;
+  }
+  .swing-other{
+    flex-direction: column;
+  }
+  .bench, .table, .swing, .other {
+    margin: 10px 0;
+  }
+  .info-footer {
+     h1{
+       font-size: 20px;
+     }
+     img{
+       height: 20px;
+       margin-right: 5px;
+     }
+     p{
+       font-size: 15px;
+     }
+   }
+}
+
+@media (max-width: 560px) {
+  .container{
+    padding: 0 15px;
+  }
+  .nav{
+    display: none;
+  }
+  .logo{
+    margin: 10px auto;
+    img{
+      width: 75%;
+      //margin: 0;
+      margin: 0 auto;
+    }
+  }
+  .slogan{
+    h1 {
+      display: none;
+    }
+    h2{
+      font-size: 30px;
+    }
+  }
+  .check img{
+    width: 30px;
+  }
+  .advantages{
+    padding: 0;
+  }
+  .main-goods {
+    h1{
+      font-size: 20px;
+    }
+  }
+  .info-footer {
+    //flex-direction: row;
+    .location-footer, .email-footer{
+      display: none;
+    }
+    h1{
+      font-size: 15px;
+    }
+    img{
+      height: 20px;
+      margin-right: 5px;
+    }
+    p{
+      font-size: 10px;
+    }
+  }
+  .contact{
+    p a{
+      font-size: 10px;
+    }
+    img{
+      height: 15px;
+      margin: 2px 2px 0 0;
+    }
+  }
+  .logo-footer{
+    margin-top:10px ;
+  }
+}
+
+@media (max-width: 425px) {
+  .slogan{
+    h2{
+      font-size: 20px;
+    }
+  }
+  .check{
+    img{
+      width: 20px;
+      padding-right: 5px;
+    }
+  }
+  .bench, .table, .swing, .other {
+    & img:hover{
+      transform: none;
+    }
+  }
+}

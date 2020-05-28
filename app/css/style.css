@@ -346,12 +346,6 @@ template {
   font-style: normal;
 }
 
-@media screen and (max-width: 1237px) {
-  .logo img {
-    width: 100px;
-  }
-}
-
 html {
   background: white;
   min-height: 100%;
@@ -389,6 +383,10 @@ a {
 /*height: 750px;*/
 /*display: flex;*/
 /*}*/
+.logo {
+  margin: 30px 0;
+}
+
 .logo img {
   width: 200px;
   display: flex;
@@ -401,20 +399,21 @@ a {
   transform: scale(1.2);
 }
 
-.header {
-  margin: 0 50px 0 50px;
-  padding: 20px 0 20px;
+.container {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 30px 0;
 }
 
 .nav-menu {
@@ -557,20 +556,11 @@ a {
   margin-bottom: 5px;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-}
-
 .advantages {
   background: url("../img/main/content_bench.png") no-repeat, #6e6e6e;
   background-position: center;
-  background-size: 800px;
+  background-size: 100%;
   padding: 20px 0 20px 0;
-}
-
-.slogan {
-  margin: 0 50px 0 50px;
 }
 
 .slogan h1 {
@@ -578,6 +568,13 @@ a {
   font: 60px Tahoma;
   font-weight: bold;
   color: white;
+}
+
+.slogan h2 {
+  font: 60px Tahoma;
+  font-weight: bold;
+  color: white;
+  margin: 0;
 }
 
 .check-ul {
@@ -608,17 +605,16 @@ a {
   font: 50px Tahoma;
   color: white;
   font-weight: bold;
+  line-height: 1.5;
 }
 
 .bench-table {
   display: flex;
   justify-content: center;
-  margin: 0 50px 0 50px;
 }
 
 .swing-other {
   display: flex;
-  margin: 0 50px 0 50px;
   justify-content: center;
 }
 
@@ -752,21 +748,17 @@ a {
 
 .footer {
   background-color: #0f0f0f;
-  display: flex;
   position: relative;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .communication {
-  margin: 10px 0 10px 50px;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
 }
 
 .logo-footer img {
-  width: 400px;
+  width: 60%;
 }
 
 .telegram, .instagram, .twitter {
@@ -795,16 +787,20 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.info {
+.info-footer {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
+  align-items: center;
+  padding: 10px 0;
 }
 
-.info h1 {
+.info-footer h1 {
   color: white;
   font: 40px Tahoma;
   font-weight: bold;
+  text-align: center;
 }
 
 .kyivstar-footer, .lifecell-footer, .location-footer, .email-footer {
