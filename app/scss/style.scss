@@ -25,9 +25,6 @@ body{
   flex-direction: column;
   flex: auto;
 }
-//#wrapper{
-//  max-width: 1360px;
-//}
 h1{
   margin: 0;
 }
@@ -39,25 +36,6 @@ a{
   position: relative;/*ХЗ ХЗ ХЗ*/
 }
 
-
-/*.background{*/
-/*background: url("../img/main/content_bench.png") no-repeat, black;*/
-/*background-position: center;*/
-/*background-size: 1000px;*/
-/*opacity: 0.5;*/
-/*height: 750px;*/
-/*display: flex;*/
-/*}*/
-
-//.container1{
-//  display: flex;
-//  //width: 100%;
-//  flex-direction: column;
-//}
-//.container{
-//  display: flex;
-//  margin: 0 auto;
-//}
 
 .logo {
   margin: 30px 0;
@@ -73,16 +51,6 @@ a{
   }
 }
 .header {
-  //max-width: 1400px;
-  //margin: 0 50px;
-  //padding: 20px 50px;
-  ////margin: 0 auto;
-  //display: flex;
-  //flex-wrap: wrap;
-  //align-items: center;
-  //justify-content: space-between;
-  //box-sizing: border-box;
-  //display: flex;
 }
 
 .container{
@@ -90,7 +58,6 @@ a{
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  //padding: 20px 50px;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 50px;
@@ -131,7 +98,7 @@ a{
     transition: .5s;
   }
 }
-.active {
+.active-menu {
   font-weight: bold;
 }
 .nav-menu__item {
@@ -154,7 +121,7 @@ a{
   text-align: left;
   left: 0;
   top: 100%;
-  z-index: 9;
+  z-index: 2;
   padding: 0;
   list-style: none;
   transform: translate(-10px, 0);
@@ -229,8 +196,6 @@ a{
   }
 }
 .main {
-  //display: flex;
-  //flex-direction: column;
 }
 .advantages {
   background: url("../img/main/content_bench.png") no-repeat, #6e6e6e;
@@ -239,7 +204,6 @@ a{
   padding: 20px 0 20px 0;
 }
 .slogan {
-  //margin: 0 50px 0 50px;
   h1 {
     line-height: 1.5;
     font: 60px Tahoma;
@@ -247,7 +211,6 @@ a{
     color: white;
   }
   h2 {
-    //line-height: 1.5;
     font: 60px Tahoma;
     font-weight: bold;
     color: white;
@@ -272,8 +235,6 @@ a{
   display: flex;
   flex-direction: column;
   background-color: #afd9ee;
-  //justify-content: center;
-  //align-items: center;
   h1{
     text-align: center;
     font: 50px Tahoma;
@@ -284,28 +245,23 @@ a{
 }
 .bench-table {
   display: flex;
-  //margin: 0;
-  //width: 100%;
   justify-content: center;
-  //margin: 0 50px 0 50px;
 }
 .swing-other {
   display: flex;
-  //margin: 0 50px 0 50px;
-  //width: 100%;
   justify-content: center;
 }
 
 .bench {
   position: relative;
   margin: 10px 15px 10px 0;
-  //width: 50%;
   display: flex;
   justify-content: center;
 
   img {
     width: 100%;
     transition: 0.6s;
+    z-index: -1;
   }
   h1 {
     left: 50%;
@@ -330,7 +286,6 @@ a{
 .table {
   position: relative;
   margin: 10px 0 10px 15px ;
-  //width: 50%;
   display: flex;
   justify-content: center;
   img {
@@ -360,7 +315,6 @@ a{
 .swing {
   position: relative;
   margin: 10px 15px 10px 0 ;
-  //width: 50%;
   display: flex;
   justify-content: center;
   img {
@@ -390,7 +344,6 @@ a{
 .other {
   position: relative;
   margin: 10px 0 10px 15px ;
-  //width: 50%;
   display: flex;
   justify-content: center;
   img {
@@ -418,13 +371,10 @@ a{
 
 .footer{
   background-color: #0f0f0f;
-  //display: flex;
   position: relative;
-  //justify-content: space-between;
-  //align-items: center;
+
 }
 .communication{
-  //margin: 10px 0 10px 50px;
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -440,7 +390,6 @@ a{
     display: flex;
     height: 30px;
     margin: 5px 15px 5px 0;
-    //align-items: center;
   }
   p a{
     font: 20px Tahoma;
@@ -462,10 +411,7 @@ a{
   display: flex;
   flex-direction: column;
   width: 50%;
-  //margin: 0;
-  //padding: 0;
   margin: 0 auto;
-  //text-align: center;
   align-items: center;
   padding: 10px 0;
 
@@ -484,12 +430,62 @@ a{
     display: flex;
     height: 30px;
     margin: 5px 15px 5px 0;
-    //align-items: center;
   }
   p {
     font: 20px Tahoma;
     color: white;
   }
 }
+.header-burger {
+  display: none;
+  position: relative;
+  width: 25px;
+  height: 15px;
+  z-index: 5;
+  span {
+    position: absolute;
+    background-color: #000000;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 6px;
+    transition: 0.4s;
+  }
+  &:before {
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: 0.3s;
+    top: 0;
+  }
+  &:after {
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: 0.3s;
+    bottom: 0;
+  }
+  &.active span{
+    transform: scale(0);
+  }
+  &.active:before{
+    transform: rotate(45deg);
+    top: 6px;
+    background-color: white;
+  }
+  &.active:after{
+    transform: rotate(-45deg);
+    top: 6px;
+    background-color: white;
+  }
+}
+
+
 
 
