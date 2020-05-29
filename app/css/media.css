@@ -69,6 +69,12 @@
   }
 }
 
+@media (min-width: 768px) {
+  .blur {
+    filter: none;
+  }
+}
+
 @media (max-width: 768px) {
   body.lock {
     overflow: hidden;
@@ -88,6 +94,9 @@
   }
   .slogan h1, .slogan h2 {
     font-size: 40px;
+  }
+  .main-goods img:hover {
+    transform: none;
   }
   .info, .login {
     display: none;
@@ -117,6 +126,9 @@
     font-size: 25px;
     margin: 10px 5px;
     color: white;
+  }
+  .nav-menu__link:after {
+    background: white;
   }
   .bench-table {
     flex-direction: column;
