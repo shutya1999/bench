@@ -10,6 +10,8 @@
   font-weight: normal;
   font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+$main-fonts: 'Oswald', sans-serif;
 
 
 html{
@@ -165,23 +167,30 @@ a{
   &:after {
     content: '';
     width: 0;
-    height: 3px;
+    height: 1px;
     background: black;
     position: absolute;
     top: 100%;
     left: 0;
     transition: .5s;
-    border-radius: 5px;
   }
 }
 .active-menu {
   font-weight: bold;
+  padding: 5px 10px;
+  border: 2px black solid;
+  border-radius: 4px;
+  &.nav-menu__link:after{
+    content: none;
+  }
 }
 .nav-menu__item {
   &:hover {
     .nav-menu__link {
       &:after {
         width: 100%;
+        border: 1px black solid;
+        border-radius: 2px;
       }
     }
     >.nav-sub-menu {
@@ -282,12 +291,14 @@ a{
 .slogan {
   h1 {
     line-height: 1.5;
-    font: 60px Tahoma;
-    font-weight: bold;
+    //font-size: 60px;
+    //font-family: $main-fonts;
+    font: 50px $main-fonts;
+    //font-weight: bold;
     color: white;
   }
   h2 {
-    font: 60px Tahoma;
+    font: 50px $main-fonts;
     font-weight: bold;
     color: white;
     margin: 0;
@@ -310,10 +321,10 @@ a{
 .main-goods {
   display: flex;
   flex-direction: column;
-  background-color: #afd9ee;
+  background-color: #B7B7B7;
   h1{
     text-align: center;
-    font: 50px Tahoma;
+    font: 50px $main-fonts;
     color: white;
     font-weight: bold;
     line-height: 1.5;
@@ -328,121 +339,74 @@ a{
   justify-content: center;
 }
 
-.bench {
+%main-goods-zoom-img{
   position: relative;
-  margin: 10px 15px 10px 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 
+  & .bg{
+    position:absolute;
+    background: rgba(0,0,0,0);
+    width: 100%;
+    height:100%;
+    transition: .3s;
+  }
+  &:hover .bg{
+    background: rgba(0,0,0,0.5);
+  }
   img {
     width: 100%;
-    transition: 0.6s;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
     z-index: -1;
+    //background: rgba(0, 0, 0, 1);
   }
   h1 {
+    opacity: 0;
     left: 50%;
     top: 50px;
     position: absolute;
     transform: translate(-50%, -50%);
     color: white;
-    font: 40px Tahoma;
+    font: 40px $main-fonts;
     font-weight: bold;
     z-index: 2;
+    transition: .5s ease;
   }
   h1 span{
     background: rgba(0, 0, 0, 0.7);
     padding: 5px 15px;
   }
-  & img:hover{
-    transform: scale(1.1);
+  &:hover img{
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);  }
+  &:hover h1{
+    opacity: 1;
   }
 }
 
+.bench {
+  margin: 10px 15px 10px 0;
+  @extend %main-goods-zoom-img;
+}
 
 .table {
-  position: relative;
   margin: 10px 0 10px 15px ;
-  display: flex;
-  justify-content: center;
-  img {
-    width: 100%;
-    transition: 0.6s;
-  }
-  h1 {
-    left: 50%;
-    top: 50px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    color: white;
-    font: 40px Tahoma;
-    font-weight: bold;
-    z-index: 2;
-  }
-  h1 span{
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px 15px;
-  }
-  & img:hover{
-    transform: scale(1.1);
-  }
+  @extend %main-goods-zoom-img;
 }
-
 
 .swing {
-  position: relative;
   margin: 10px 15px 10px 0 ;
-  display: flex;
-  justify-content: center;
-  img {
-    width: 100%;
-    transition: 0.6s;
-  }
-  h1 {
-    left: 50%;
-    top: 50px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    color: white;
-    font: 40px Tahoma;
-    font-weight: bold;
-    z-index: 2;
-  }
-  h1 span{
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px 15px;
-  }
-  & img:hover{
-    transform: scale(1.1);
-  }
+  @extend %main-goods-zoom-img;
 }
 
-
 .other {
-  position: relative;
   margin: 10px 0 10px 15px ;
-  display: flex;
-  justify-content: center;
-  img {
-    width: 100%;
-    transition: 0.6s;
-  }
-  h1 {
-    left: 50%;
-    top: 50px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    color: white;
-    font: 40px Tahoma;
-    font-weight: bold;
-    z-index: 2;
-  }
-  h1 span{
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px 15px;
-  }
-  & img:hover{
-    transform: scale(1.1);
-  }
+  @extend %main-goods-zoom-img;
+
 }
 
 .footer{
@@ -456,7 +420,7 @@ a{
   width: 50%;
 }
 .logo-footer img{
-  width: 60%;
+  width: 30%;
 }
 
 .telegram, .instagram, .twitter{
@@ -464,11 +428,11 @@ a{
   align-items: center;
   img{
     display: flex;
-    height: 30px;
+    height: 20px;
     margin: 5px 15px 5px 0;
   }
   p a{
-    font: 20px Tahoma;
+    font: 15px Tahoma;
     color: white;
   }
 }
@@ -493,7 +457,7 @@ a{
 
   h1{
     color: white;
-    font: 40px Tahoma;
+    font: 20px Tahoma;
     font-weight: bold;
     text-align: center;
   }
@@ -504,11 +468,11 @@ a{
   align-items: center;
   img{
     display: flex;
-    height: 30px;
+    height: 20px;
     margin: 5px 15px 5px 0;
   }
   p {
-    font: 20px Tahoma;
+    font: 15px Tahoma;
     color: white;
   }
 }

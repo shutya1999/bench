@@ -6,6 +6,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -511,21 +512,29 @@ a {
 .nav-menu__link:after {
   content: '';
   width: 0;
-  height: 3px;
+  height: 1px;
   background: black;
   position: absolute;
   top: 100%;
   left: 0;
   transition: .5s;
-  border-radius: 5px;
 }
 
 .active-menu {
   font-weight: bold;
+  padding: 5px 10px;
+  border: 2px black solid;
+  border-radius: 4px;
+}
+
+.active-menu.nav-menu__link:after {
+  content: none;
 }
 
 .nav-menu__item:hover .nav-menu__link:after {
   width: 100%;
+  border: 1px black solid;
+  border-radius: 2px;
 }
 
 .nav-menu__item:hover > .nav-sub-menu {
@@ -637,13 +646,12 @@ a {
 
 .slogan h1 {
   line-height: 1.5;
-  font: 60px Tahoma;
-  font-weight: bold;
+  font: 50px "Oswald", sans-serif;
   color: white;
 }
 
 .slogan h2 {
-  font: 60px Tahoma;
+  font: 50px "Oswald", sans-serif;
   font-weight: bold;
   color: white;
   margin: 0;
@@ -669,12 +677,12 @@ a {
 .main-goods {
   display: flex;
   flex-direction: column;
-  background-color: #afd9ee;
+  background-color: #B7B7B7;
 }
 
 .main-goods h1 {
   text-align: center;
-  font: 50px Tahoma;
+  font: 50px "Oswald", sans-serif;
   color: white;
   font-weight: bold;
   line-height: 1.5;
@@ -690,133 +698,75 @@ a {
   justify-content: center;
 }
 
-.bench {
+.bench, .table, .swing, .other {
   position: relative;
-  margin: 10px 15px 10px 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
-.bench img {
+.bench .bg, .table .bg, .swing .bg, .other .bg {
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
   width: 100%;
-  transition: 0.6s;
+  height: 100%;
+  transition: .3s;
+}
+
+.bench:hover .bg, .table:hover .bg, .swing:hover .bg, .other:hover .bg {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.bench img, .table img, .swing img, .other img {
+  width: 100%;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
   z-index: -1;
 }
 
-.bench h1 {
+.bench h1, .table h1, .swing h1, .other h1 {
+  opacity: 0;
   left: 50%;
   top: 50px;
   position: absolute;
   transform: translate(-50%, -50%);
   color: white;
-  font: 40px Tahoma;
+  font: 40px "Oswald", sans-serif;
   font-weight: bold;
   z-index: 2;
+  transition: .5s ease;
 }
 
-.bench h1 span {
+.bench h1 span, .table h1 span, .swing h1 span, .other h1 span {
   background: rgba(0, 0, 0, 0.7);
   padding: 5px 15px;
 }
 
-.bench img:hover {
-  transform: scale(1.1);
+.bench:hover img, .table:hover img, .swing:hover img, .other:hover img {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.bench:hover h1, .table:hover h1, .swing:hover h1, .other:hover h1 {
+  opacity: 1;
+}
+
+.bench {
+  margin: 10px 15px 10px 0;
 }
 
 .table {
-  position: relative;
   margin: 10px 0 10px 15px;
-  display: flex;
-  justify-content: center;
-}
-
-.table img {
-  width: 100%;
-  transition: 0.6s;
-}
-
-.table h1 {
-  left: 50%;
-  top: 50px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  color: white;
-  font: 40px Tahoma;
-  font-weight: bold;
-  z-index: 2;
-}
-
-.table h1 span {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 5px 15px;
-}
-
-.table img:hover {
-  transform: scale(1.1);
 }
 
 .swing {
-  position: relative;
   margin: 10px 15px 10px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.swing img {
-  width: 100%;
-  transition: 0.6s;
-}
-
-.swing h1 {
-  left: 50%;
-  top: 50px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  color: white;
-  font: 40px Tahoma;
-  font-weight: bold;
-  z-index: 2;
-}
-
-.swing h1 span {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 5px 15px;
-}
-
-.swing img:hover {
-  transform: scale(1.1);
 }
 
 .other {
-  position: relative;
   margin: 10px 0 10px 15px;
-  display: flex;
-  justify-content: center;
-}
-
-.other img {
-  width: 100%;
-  transition: 0.6s;
-}
-
-.other h1 {
-  left: 50%;
-  top: 50px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  color: white;
-  font: 40px Tahoma;
-  font-weight: bold;
-  z-index: 2;
-}
-
-.other h1 span {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 5px 15px;
-}
-
-.other img:hover {
-  transform: scale(1.1);
 }
 
 .footer {
@@ -831,7 +781,7 @@ a {
 }
 
 .logo-footer img {
-  width: 60%;
+  width: 30%;
 }
 
 .telegram, .instagram, .twitter {
@@ -841,12 +791,12 @@ a {
 
 .telegram img, .instagram img, .twitter img {
   display: flex;
-  height: 30px;
+  height: 20px;
   margin: 5px 15px 5px 0;
 }
 
 .telegram p a, .instagram p a, .twitter p a {
-  font: 20px Tahoma;
+  font: 15px Tahoma;
   color: white;
 }
 
@@ -871,7 +821,7 @@ a {
 
 .info-footer h1 {
   color: white;
-  font: 40px Tahoma;
+  font: 20px Tahoma;
   font-weight: bold;
   text-align: center;
 }
@@ -883,12 +833,12 @@ a {
 
 .kyivstar-footer img, .lifecell-footer img, .location-footer img, .email-footer img {
   display: flex;
-  height: 30px;
+  height: 20px;
   margin: 5px 15px 5px 0;
 }
 
 .kyivstar-footer p, .lifecell-footer p, .location-footer p, .email-footer p {
-  font: 20px Tahoma;
+  font: 15px Tahoma;
   color: white;
 }
 

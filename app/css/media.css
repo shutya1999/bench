@@ -53,19 +53,21 @@
     top: 30px;
   }
   .contact p a {
-    font-size: 15px;
+    font-size: 10px;
   }
   .contact img {
-    height: 20px;
+    height: 15px;
+    margin: 3px 5px 3px 0;
   }
   .info-footer h1 {
-    font-size: 30px;
+    font-size: 15px;
   }
   .info-footer img {
-    height: 20px;
+    height: 15px;
+    margin: 3px 5px 3px 0;
   }
   .info-footer p {
-    font-size: 15px;
+    font-size: 10px;
   }
 }
 
