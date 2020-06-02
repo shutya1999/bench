@@ -136,7 +136,7 @@ a{
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 1400px;
-  margin: 0 auto;
+  //margin: 0 auto;
   padding: 0 50px;
 }
 
@@ -218,7 +218,7 @@ a{
 }
 .nav-sub-menu__link {
   display: block;
-  margin: 10px 15px;
+  margin: 10px 25px;
   color: black;
   font: 18px Tahoma;
   transition: 0.3s;

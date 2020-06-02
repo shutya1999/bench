@@ -8,17 +8,27 @@ $(document).ready(function () {
 
     });
 
-    $(function() {
-        $('.nav-menu [href]').each(function() {
+    $(function () {
+        $('.nav-menu [href]').each(function () {
             if (this.href === window.location.href) {
                 $(this).addClass('active-menu');
             }
         });
     });
 
+       $('.filter').change(function() {
+        const values = $('input:checked', this).get().map(n => n.dataset.filter);
+        // console.log(values);
+        $('.cart-product').each((i, n) => $(n).toggle(!values.length || values.includes(n.dataset.category)));
+    }).change();
+
 });
 
 window.onload = function () {
-  let preloader = document.getElementById('preloader');
-  preloader.style.display = 'none';
+    let preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
 };
+
+
+
+

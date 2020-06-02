@@ -1,0 +1,113 @@
+@import "../../node_modules/normalize.css/normalize";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scada:wght@700&display=swap');
+$main-fonts: 'Oswald', sans-serif;
+$menu-fonts: 'Scada', sans-serif;
+
+h1{
+  font-family: $main-fonts;
+  margin: 0;
+  //margin: 0;
+  //line-height: 2;
+}
+.header-goods{
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.logo-goods{
+  display: flex;
+  img{
+    width: 200px;
+  }
+}
+.nav-goods{
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-goods-ul{
+  display: flex;
+  list-style: none;
+}
+.nav-goods-li{
+
+}
+.nav-goods__link{
+  margin: 0 10px;
+  color: white;
+  font: 20px $menu-fonts;
+
+}
+
+.main-content{
+  margin: 77px 0;
+  //height: 1000px;
+  background-color: white;
+}
+.all-goods{
+  display: flex;
+  width: 100%;
+}
+.filter{
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  //flex-grow: 1;
+  min-width: 20%;
+  //height: 500px;
+  border: 2px black solid;
+  border-radius: 5px;
+  h2{
+    margin: 0;
+    //width: 100%;
+    text-align: center;
+  }
+}
+.filter{
+  //display: flex;
+  //align-items: center;
+  label{
+    margin-left: 20px;
+    font: 20px $menu-fonts;
+  }
+
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 5px 10px 5px 0 ;
+  width: 20px;
+  height: 20px;
+}
+
+.good{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  //flex-grow: 1;
+  //max-width: 60%;
+  //height: 500px;
+  min-width: 80%;
+  //width: 700px;
+}
+.cart-product{
+  flex: 1 1 calc(33.33% - 30px);
+  max-width: 300px;
+  h2{
+    text-align: center;
+    color: white;
+  }
+  img{
+    width: 100%;
+  }
+}
+
+
+
+
