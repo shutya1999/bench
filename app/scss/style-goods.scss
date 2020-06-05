@@ -17,7 +17,7 @@ h1{
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 99;
 }
 .logo-goods{
   display: flex;
@@ -42,12 +42,14 @@ h1{
   font: 20px $menu-fonts;
 }
 .main-content{
-  margin: 77px 0;
+  margin: 77px 0 0 0;
   background-color: #f8f8f8;
+  height: 100%;
 }
 .all-goods{
   display: flex;
   width: 100%;
+  margin-bottom: 20px;
 }
 .filter{
   display: flex;
@@ -64,7 +66,7 @@ h1{
     margin: 10px 0 0 0;
   }
   &:hover{
-    box-shadow: 0 0 5px rgba(#7abaff, .5);
+    box-shadow: 0 0 10px rgba(#7abaff, .8);
   }
 }
 
@@ -132,19 +134,35 @@ h1{
   min-width: 80%;
 }
 .cart-product{
-  flex: 1 1 calc(33.33% - 30px);
-  max-width: 33.33%;
+  //flex: 1 1 calc(33.33% - 30px);
+  flex: 1 1 26.66%;
+  max-width: calc(100% / 3);
+  //min-height: 200px;
   margin: 5px 5px;
   border: 1px #7abaff solid;
   position: relative;
   overflow: hidden;
+  padding-bottom: 75px;
+  //justify-content: center;
+  //background-color: white;
   h2{
-    opacity: 0;
+    position: absolute;
+    opacity: 1;
+    color: white;
+    transition: all .4s ease;
+    width: 100%;
     text-align: center;
-    color: black;
+    font: 20px 'Roboto';
+    z-index: 3;
+    margin: 0;
+  background-color: #FF9C46;
+    //background-color: rgba(#FF7A09, .5);
+    //margin-bottom: 100px;
   }
   img{
+    //margin-top: 40px;
     width: 100%;
+    //z-index: -1;
   }
   &:before{
     content: "";
@@ -154,21 +172,28 @@ h1{
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0);
-    transition: all .2s ease;
+    transition: all .4s ease;
+    z-index: 1;
   }
   &:hover::before {
     background-color: rgba(0,0,0,.2);
-    h2{
-      display: block;
-    }
+    //h2{
+    //  display: block;
+    //}
   }
   &:hover{
     h2{
       opacity: 1;
+      //transition: all .4s ease;
+      //z-index: 5;
+
     }
-    box-shadow: 0 0 5px rgba(#7abaff, .5);
+    box-shadow: 0 0 10px rgba(#7abaff, .8);
     .btn{
       bottom: 0;
+    }
+    .price{
+      opacity: 0;
     }
   }
 }
@@ -178,15 +203,23 @@ h1{
   bottom: -15%;
   width: 100%;
   height: 15%;
-  //transition: 1s;
-  transition: .2s;
+  transition: all .4s ease;
+  //background-color: #8E82FF;
   background-color: rgba(#7abaff, 1);
   border: none;
-  font-size: 20px;
+  //font-size: 20px;
   color: white;
+  font: 20px 'Roboto';
+  padding: 0;
+  z-index: 3;
+  &:hover{
+    background-color: #3e95bf;
+  }
+  &:active, &:focus{
+    outline: none;
+  }
 }
 .price{
-  //content: "";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,12 +230,14 @@ h1{
   height: 50px;
   background-color: #7abaff;
   border-radius: 0 0 0 10px;
+  transition: all .3s ease;
   span{
     color: whitesmoke;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
   }
   img{
+    margin: 0;
     width: 30px;
   }
 
