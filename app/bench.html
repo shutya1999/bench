@@ -55,34 +55,54 @@
             <div class="filter">
                 <!--<div class="text-center">-->
                 <h2>Фільтр</h2>
-                <p>
-                    <label><input class="form-check-input" type="checkbox" value="bench" data-filter="bench">Лавочки</label><br>
-                    <label><input class="form-check-input" type="checkbox" value="table" data-filter="table">Столи</label><br>
-                    <label><input class="form-check-input" type="checkbox" value="sets" data-filter="sets">Комплекти</label><br>
-                    <label><input class="form-check-input" type="checkbox" value="swing" data-filter="swing">Качелі</label><br>
-                    <label><input class="form-check-input" type="checkbox" value="other" data-filter="other">Інше</label><br>
-                </p>
-                <!--<p>-->
-                    <!--<button id="btn" class="btn btn-sm btn-outline-primary">Переглянути</button>-->
-                <!--</p>-->
+                <div class="checkbox">
+                    <input type="checkbox" class="my_checkbox" id="bench" value="bench" data-filter="bench">
+                    <label for="bench" class="checkbox__label">Лавочки</label>
+                    <!--<div class="bg"></div>-->
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" class="my_checkbox" id="table" value="table" data-filter="table">
+                    <label for="table" class="checkbox__label">Столи</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" class="my_checkbox" id="sets" value="sets" data-filter="sets">
+                    <label for="sets" class="checkbox__label">Комплекти</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" class="my_checkbox" id="swing" value="swing" data-filter="swing">
+                    <label for="swing" class="checkbox__label">Качелі</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" class="my_checkbox" id="other" value="other" data-filter="other">
+                    <label for="other" class="checkbox__label">Інше</label>
+                </div>
             </div>
 
             <div class="good">
                 <div class="cart-product" data-category="bench">
                     <h2>Лавка</h2>
                     <img src="img/bench/0101.png" alt="">
+                    <div class="bg"></div>
+                    <div class="price">
+                        <span>1000</span>
+                        <img src="img/grivna-white.png" alt="">
+                    </div>
+                    <input type="button" class="btn" value="Придбати">
                 </div>
                 <div class="cart-product" data-category="bench">
                     <h2>Лавка</h2>
                     <img src="img/bench/0102.png" alt="">
+                    <button class="btn">Придбати</button>
                 </div>
                 <div class="cart-product" data-category="bench">
                     <h2>Лавка</h2>
                     <img src="img/bench/0103.png" alt="">
+                    <button class="btn">Придбати</button>
                 </div>
                 <div class="cart-product" data-category="bench">
                     <h2>Лавка</h2>
                     <img src="img/bench/0104.png" alt="">
+                    <button class="btn">Придбати</button>
                 </div>
                 <div class="cart-product" data-category="bench">
                     <h2>Лавка</h2>

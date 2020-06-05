@@ -704,7 +704,7 @@ a {
   overflow: hidden;
 }
 
-.bench .bg, .table .bg, .swing .bg, .other .bg {
+.bg.bench, .bg.table, .bg.swing, .bg.other {
   position: absolute;
   background: rgba(0, 0, 0, 0);
   width: 100%;

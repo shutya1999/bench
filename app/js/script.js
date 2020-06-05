@@ -16,11 +16,13 @@ $(document).ready(function () {
         });
     });
 
-       $('.filter').change(function() {
-        const values = $('input:checked', this).get().map(n => n.dataset.filter);
-        // console.log(values);
-        $('.cart-product').each((i, n) => $(n).toggle(!values.length || values.includes(n.dataset.category)));
-    }).change();
+    // $('#btn').on('click', function () {
+        $('.filter').change(function() {
+            const values = $('input:checked', this).get().map(n => n.dataset.filter);
+            // console.log(values);
+            $('.cart-product').each((i, n) => $(n).toggle(!values.length || values.includes(n.dataset.category)));
+        }).change();
+    // })
 
 });
 
