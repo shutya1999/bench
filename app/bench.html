@@ -5,8 +5,8 @@
     <title>Bench</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/style-goods.css">
+    <link rel="stylesheet" href="css/media.css">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
 </head>
@@ -32,336 +32,27 @@
 
             <ul class="nav-goods-ul">
                 <li class="nav-goods-li">
-                    <a href="" class="nav-goods__link">Головна</a>
+                    <a href="index.html" class="nav-goods__link">Головна</a>
                 </li>
                 <li class="nav-goods-li">
-                    <a href="" class="nav-goods__link">Вироби</a>
+                    <a href="goods.html" class="nav-goods__link">Вироби</a>
                 </li>
                 <li class="nav-goods-li">
-                    <a href="" class="nav-goods__link">Про нас</a>
+                    <a href="about.html" class="nav-goods__link">Про нас</a>
                 </li>
                 <li class="nav-goods-li">
-                    <a href="" class="nav-goods__link">Доставка</a>
+                    <a href="delivery.html" class="nav-goods__link">Доставка</a>
                 </li>
             </ul>
         </div>
     </div>
 </header>
 
-<main class="main-content">
+<main class="main-content" style="height: 1000px; text-align: center">
     <div class="container">
-        <h1 style="display: block; width: 100%; color: black; text-align: center">Вироби</h1>
-        <div class="sorting">
-            <p>Сортувати за: </p>
-            <select id="sort-price" name="select">
-                <option value="up">зростанням ціни</option>
-                <option value="down">спаданням ціни</option>
-            </select>
-            <button id="btn">Sort</button>
-        </div>
-        <div class="all-goods">
-            <div class="filter">
-                <!--<div class="text-center">-->
-                <h2>Фільтр</h2>
-                <div class="checkbox">
-                    <input type="checkbox" class="my_checkbox" id="bench" value="bench" data-filter="bench">
-                    <label for="bench" class="checkbox__label">Лавочки</label>
-                    <!--<div class="bg"></div>-->
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" class="my_checkbox" id="table" value="table" data-filter="table">
-                    <label for="table" class="checkbox__label">Столи</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" class="my_checkbox" id="sets" value="sets" data-filter="sets">
-                    <label for="sets" class="checkbox__label">Комплекти</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" class="my_checkbox" id="swing" value="swing" data-filter="swing">
-                    <label for="swing" class="checkbox__label">Качелі</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" class="my_checkbox" id="other" value="other" data-filter="other">
-                    <label for="other" class="checkbox__label">Інше</label>
-                </div>
-            </div>
-
-            <div class="good" id="good">
-                <div class="cart-product" data-category="bench" data-price="1200">
-                    <img src="img/bench/0101.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1200</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка садова пряма</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="bench" data-price="2500">
-                    <img src="img/bench/0102.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>2500</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка кована</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="bench" data-price="1800">
-                    <img src="img/bench/0103.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1800</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка з круглою спинкою</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="bench" data-price="1500">
-                    <img src="img/bench/0104.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1500</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка без поручней</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="bench" data-price="2200">
-                    <img src="img/bench/0105.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>2200</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка з металевими поручнями</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="bench" data-price="2300">
-                    <img src="img/bench/0106.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>2300</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка кована</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="bench" data-price="1400">
-                    <img src="img/bench/0107.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1400</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка садова</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="bench" data-price="2500">
-                    <img src="img/bench/0108.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>2500</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка кована</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="bench" data-price="1000">
-                    <img src="img/bench/0109.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1000</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка садова звичайна</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="bench" data-price="1200">
-                    <img src="img/bench/0110.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1200</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка садова</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="bench" data-price="2700">
-                    <img src="img/bench/0111.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>2700</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка кована ELITE</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="bench" data-price="2800">
-                    <img src="img/bench/0112.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>2800</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка кована ELITE</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="bench" data-price="2800">
-                    <img src="img/bench/0112.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>2800</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Лавка кована ELITE</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-
-
-                <div class="cart-product" data-category="table" data-price="1600">
-                    <img src="img/table/0201.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1600</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Стіл з круглими ніжками</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="table" data-price="1800">
-                    <img src="img/table/0202.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1800</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Стіл з квадратними ніжками</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="table" data-price="1400">
-                    <img src="img/table/0203.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1400</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Стіл садовий</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="table" data-price="2000">
-                    <img src="img/table/0401.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>2000</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Стіл дерев'яний</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="table" data-price="2000">
-                    <img src="img/table/0402.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>2000</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Стіл дерев'яний</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-
-                <div class="cart-product" data-category="sets" data-price="7000">
-                    <img src="img/sets/0301.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>7000</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Коомплект кований</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="sets" data-price="6000">
-                    <img src="img/sets/0302.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>6000</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Коомплект кований</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="sets" data-price="7500">
-                    <img src="img/sets/0303.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>7500</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Коомплект кований</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="sets" data-price="5000">
-                    <img src="img/sets/0403.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>5000</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Комплект дерев'яний</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="sets" data-price="5000">
-                    <img src="img/sets/0404.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>5000</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Комплект дерев'яний</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-
-                <div class="cart-product" data-category="other" data-price="1200">
-                    <img src="img/other/0601.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1200</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Підвазонник</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="other" data-price="1100">
-                    <img src="img/other/0602.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1100</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Підвазонник</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="other" data-price="1000">
-                    <img src="img/other/0701.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1000</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Вішалка</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-                <div class="cart-product" data-category="other" data-price="1000">
-                    <img src="img/other/0702.png" alt="">
-                    <div class="bg"></div>
-                    <div class="price">
-                        <span>1000</span>
-                        <img src="img/grivna-white.png" alt="">
-                    </div>
-                    <h2>Вішалка</h2>
-                    <input type="button" class="btn" value="Придбати">
-                </div>
-            </div>
+        <h1 style="text-align: center; width: 100%">Сторінка в розробці</h1>
+        <div class="about">
+            <img src="img/smile.png" alt="">
         </div>
     </div>
 </main>

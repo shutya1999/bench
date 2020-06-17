@@ -2,16 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Scada:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
 $main-fonts: 'Oswald', sans-serif;
 $menu-fonts: 'Scada', sans-serif;
+$ubuntu-font: 'Ubuntu Condensed', sans-serif;
 
-h1{
+h1 {
   font-family: $main-fonts;
   margin: 0;
   //margin: 0;
-  line-height: 2;
+  //line-height: 2;
 }
-.header-goods{
+
+.header-goods {
   background-color: black;
   position: fixed;
   top: 0;
@@ -19,39 +23,52 @@ h1{
   width: 100%;
   z-index: 99;
 }
-.logo-goods{
+
+.logo-goods {
   display: flex;
-  img{
+  img {
     width: 200px;
   }
 }
-.nav-goods{
+
+.nav-goods {
   display: flex;
   width: 100%;
   margin: 10px 0;
   justify-content: space-between;
   align-items: center;
 }
-.nav-goods-ul{
+
+.nav-goods-ul {
   display: flex;
   list-style: none;
 }
-.nav-goods__link{
+
+.nav-goods__link {
   margin: 0 0 0 10px;
   color: white;
   font: 20px $menu-fonts;
 }
-.main-content{
+
+.main-content {
   margin: 77px 0 0 0;
   background-color: #f8f8f8;
   height: 100%;
 }
-.all-goods{
+.ware-text{
+  display: block;
+  width: 100%;
+  color: black;
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+.all-goods {
   display: flex;
   width: 100%;
   margin-bottom: 20px;
 }
-.filter{
+
+.filter {
   display: flex;
   background-color: white;
   flex-direction: column;
@@ -59,32 +76,35 @@ h1{
   margin: 5px 5px;
   min-width: 20%;
   border: 1px #7abaff solid;
-  h2{
+  h2 {
     //margin: 0;
     text-align: center;
     font: 20px $menu-fonts;
     margin: 10px 0 0 0;
   }
-  &:hover{
+  &:hover {
     box-shadow: 0 0 10px rgba(#7abaff, .8);
   }
 }
 
 //////////checkbox////////////
-.checkbox{
+.checkbox {
   position: relative;
   margin: 5px 0 5px 20px;
 }
-.my_checkbox{
+
+.my_checkbox {
   position: absolute;
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
-.checkbox__label{
+
+.checkbox__label {
   font-size: 20px;
   color: black;
   padding-left: 30px;
 
-  &:before{
+  &:before {
     content: "";
     display: block;
     width: 20px;
@@ -96,14 +116,13 @@ h1{
     left: 0;
     z-index: 1;
   }
-  &:after{
+  &:after {
     content: "";
     display: block;
     width: 20px;
     height: 20px;
     background: url("../img/checkbox-white.png") no-repeat;
-    //background: url("../img/check-blue.svg") no-repeat;
-    background-size: 16px 16px ;
+    background-size: 16px 16px;
     background-position: center center;
     position: absolute;
     left: 2px;
@@ -113,39 +132,35 @@ h1{
     transition: opacity .1s linear;
   }
 }
-.my_checkbox:hover + .checkbox__label:before{
-  //border-color: #0b76ef;
+
+.my_checkbox:hover + .checkbox__label:before {
   border: 2px #49bcff solid;
-  //background-color: #86d2ff;
 }
 
-.my_checkbox:checked + .checkbox__label:before{
+.my_checkbox:checked + .checkbox__label:before {
   border-color: #0b76ef;
   background-color: #0b76ef;
 }
-.my_checkbox:checked + .checkbox__label:after{
+
+.my_checkbox:checked + .checkbox__label:after {
   opacity: 1;
 }
 
-.good{
+.good {
   display: flex;
   flex-wrap: wrap;
-  //background-color: white;
   min-width: 80%;
 }
-.cart-product{
-  //flex: 1 1 calc(33.33% - 30px);
+
+.cart-product {
   flex: 1 1 26.66%;
   max-width: calc(100% / 3);
-  //min-height: 200px;
   margin: 5px 5px;
   border: 1px #7abaff solid;
   position: relative;
   overflow: hidden;
   padding-bottom: 75px;
-  //justify-content: center;
-  //background-color: white;
-  h2{
+  h2 {
     position: absolute;
     opacity: 1;
     color: white;
@@ -155,92 +170,132 @@ h1{
     font: 20px 'Roboto';
     z-index: 3;
     margin: 0;
-  background-color: #FF9C46;
-    //background-color: rgba(#FF7A09, .5);
-    //margin-bottom: 100px;
+    background-color: #FF9C46;
   }
-  img{
-    //margin-top: 40px;
+  img {
     width: 100%;
-    //z-index: -1;
   }
-  &:before{
+  &:before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     transition: all .4s ease;
     z-index: 1;
   }
   &:hover::before {
-    background-color: rgba(0,0,0,.2);
-    //h2{
-    //  display: block;
-    //}
+    background-color: rgba(0, 0, 0, .2);
   }
-  &:hover{
-    h2{
+  &:hover {
+    h2 {
       opacity: 1;
-      //transition: all .4s ease;
-      //z-index: 5;
-
     }
     box-shadow: 0 0 10px rgba(#7abaff, .8);
-    .btn{
+    .btn {
       bottom: 0;
     }
-    .price{
+    .price {
       opacity: 0;
     }
   }
 }
-.btn{
+
+.btn {
   position: absolute;
   left: 0;
   bottom: -15%;
   width: 100%;
   height: 15%;
   transition: all .4s ease;
-  //background-color: #8E82FF;
   background-color: rgba(#7abaff, 1);
   border: none;
-  //font-size: 20px;
   color: white;
   font: 20px 'Roboto';
   padding: 0;
   z-index: 3;
-  &:hover{
+  &:hover {
     background-color: #3e95bf;
   }
-  &:active, &:focus{
+  &:active, &:focus {
     outline: none;
   }
 }
-.price{
+
+.price {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 0;
   right: 0;
-  width: 120px;
+  width: 40%;
   height: 50px;
   background-color: #7abaff;
   border-radius: 0 0 0 10px;
   transition: all .3s ease;
-  span{
+  span {
     color: whitesmoke;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
   }
-  img{
+  img {
     margin: 0;
     width: 30px;
   }
 
 }
 
+.sorting {
+  margin: 0 auto;
+  position: relative;
+  padding: 10px 0;
+  //margin-bottom: 20px;
+  &:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: #007bff transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    pointer-events: none;
+    right: 33%;
+    z-index: 2;
+  }
+  p {
+    display: inline;
+    font: 20px $ubuntu-font;
+  }
+  select {
+    padding: 5px 25px 5px 5px;
+    //padding: 5px 20px;
+    border: 1px #7abaff solid;
+    border-radius: 2px;
+    background: none;
+    //border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font: 20px $ubuntu-font;
+    &:focus {
+      outline: 0;
+    }
+  }
+  button {
+    transition: all .4s ease;
+    background-color: rgba(#7abaff, 1);
+    border: 1px #3e95bf solid;
+    border-radius: 2px;
+    color: white;
+    font: 20px $ubuntu-font;
+    padding: 3px 10px;
+    &:hover {
+      background-color: #3e95bf;
+      box-shadow: 0 0 10px rgba(#7abaff, .8);
+    }
+  }
+}
 

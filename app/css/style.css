@@ -897,3 +897,8 @@ a {
   top: 6px;
   background-color: white;
 }
+
+.about, .delivery {
+  display: flex;
+  margin: 0 auto;
+}

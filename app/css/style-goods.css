@@ -8,6 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Scada:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -343,7 +344,6 @@ template {
 h1 {
   font-family: "Oswald", sans-serif;
   margin: 0;
-  line-height: 2;
 }
 
 .header-goods {
@@ -388,6 +388,14 @@ h1 {
   height: 100%;
 }
 
+.ware-text {
+  display: block;
+  width: 100%;
+  color: black;
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+
 .all-goods {
   display: flex;
   width: 100%;
@@ -422,6 +430,7 @@ h1 {
 .my_checkbox {
   position: absolute;
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .checkbox__label {
@@ -567,7 +576,7 @@ h1 {
   position: absolute;
   top: 0;
   right: 0;
-  width: 120px;
+  width: 40%;
   height: 50px;
   background-color: #7abaff;
   border-radius: 0 0 0 10px;
@@ -583,4 +592,58 @@ h1 {
 .price img {
   margin: 0;
   width: 30px;
+}
+
+.sorting {
+  margin: 0 auto;
+  position: relative;
+  padding: 10px 0;
+}
+
+.sorting:after {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #007bff transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  margin-top: -3px;
+  pointer-events: none;
+  right: 33%;
+  z-index: 2;
+}
+
+.sorting p {
+  display: inline;
+  font: 20px "Ubuntu Condensed", sans-serif;
+}
+
+.sorting select {
+  padding: 5px 25px 5px 5px;
+  border: 1px #7abaff solid;
+  border-radius: 2px;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font: 20px "Ubuntu Condensed", sans-serif;
+}
+
+.sorting select:focus {
+  outline: 0;
+}
+
+.sorting button {
+  transition: all .4s ease;
+  background-color: #7abaff;
+  border: 1px #3e95bf solid;
+  border-radius: 2px;
+  color: white;
+  font: 20px "Ubuntu Condensed", sans-serif;
+  padding: 3px 10px;
+}
+
+.sorting button:hover {
+  background-color: #3e95bf;
+  box-shadow: 0 0 10px rgba(122, 186, 255, 0.8);
 }

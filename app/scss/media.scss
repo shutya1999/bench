@@ -87,6 +87,49 @@
       font-size: 10px;
     }
   }
+  ////////Style-goods////////
+  .ware-text{
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  .sorting{
+    p{
+      font-size: 15px;
+    }
+    select{
+      font-size: 15px;
+    }
+    button{
+      font-size: 15px;
+    }
+  }
+  .filter{
+    height: 200px;
+  }
+  .price{
+    //width: 30%;
+    height: 40px;
+    span{
+      font-size: 20px;
+    }
+    img{
+      width: 20px;
+    }
+  }
+  .cart-product{
+    padding-bottom: 60px;
+    h2{
+      font-size: 15px;
+    }
+  }
+  .checkbox__label{
+    font-size: 15px;
+    padding-left: 25px;
+    &:before{
+      height: 15px;
+      width: 15px;
+    }
+  }
 }
 @media (min-width: 768px) {
   .blur{
