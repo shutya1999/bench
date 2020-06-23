@@ -26,8 +26,8 @@ $(document).ready(function () {
 });
 
 window.onload = function () {
-    let preloader = document.getElementById('preloader');
-    preloader.style.display = 'none';
+    // let preloader = document.getElementById('preloader');
+    // preloader.style.display = 'none';
 
 
     let pathname = window.location.pathname;
